@@ -1,12 +1,17 @@
-#!/bin/bash 
+#!/bin/bash
 
-	read -p " Enter Date: " date
-	read -p " Enter Month: " Month
+read -p " Enter Date:-" date
+read -p " Enter Month:-" Month
 
-	if  (( ($Month >= 3 & $Month <= 6 & $date >= 1 & $date <= 31 ) && ($date<31) ))
-	then
-		 echo $Month $date "True";
-	else
-		echo $Month $date "False";
+if (( ($Month <= 6 & $date <= 20) ))
+then
+        echo $Month $date "True";
 
-	fi
+elif (( ($Month >= 3 & $Month < 6) & ($date<31)  ))
+then
+        echo $date $Month "True";
+
+else
+
+        echo "False";
+fi

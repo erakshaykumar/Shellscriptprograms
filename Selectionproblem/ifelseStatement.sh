@@ -1,34 +1,63 @@
-#!/bin/bash -x
+#!/bin/bash
 
-	diff=$((1000-100+1))
-	var1=$(($((RANDOM%diff))+100))
-	var2=$(($((RANDOM%diff))+100))
-	var3=$(($((RANDOM%diff))+100))
-	var4=$(($((RANDOM%diff))+100))
-	var5=$(($((RANDOM%diff))+100))
+read -p "Enter First number:"  a
+maximum=$a
+minimum=$a
+read -p "Enter Second number:"  b
 
-	if [ $line -gt $max ]
+if [ $b -gt $maximum ]
 then
-max=$line
-else
-continue
+    maximum=$b
+
 fi
-echo $max > max_number
-done
-echo "Miximum number in this file: " `cat max_number`
-rm -rf max_number
-}min=9223372036854775807 #This is maximum number used in bash –>refer /usr/include/limits.h
-min(){
-cat $number |sed '/^$/d' | while read line; do
-if [ $line -lt $min ]
+
+if [ $b -lt  $minimum ]
 then
-min=$line
-else
-continue
+    minimum=$b
+
 fi
-echo $min > min_number
-done
-echo "Minimum number in this file: " `cat min_number`
-rm -rf min_number
-}max
-min
+
+read -p "Enter third number:" c
+
+if [  $c -gt $maximum ]
+then
+  maximum=$c
+
+fi
+
+read -p "Enter the fourth Number:"  d
+
+if [ $c -lt  $minimum ]
+then
+    minimum=$c
+
+fi
+
+if [  $d -gt $maximum ]
+then
+  maximum=$d
+
+fi
+
+if [ $d -lt  $minimum ]
+then
+    minimum=$d
+
+fi
+
+read -p "Enter the fifth number:"  e
+
+if [  $e -gt $maximum ]
+then
+  maximum=$e
+
+fi
+
+if [ $e -lt  $minimum ]
+then
+    minimum=$e
+
+fi
+
+echo "Maximum:"$maximum
+echo  "Minimum:"$minimum

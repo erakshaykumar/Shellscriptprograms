@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 
 read -p " Enter Date:-" date
 read -p " Enter Month:-" Month
@@ -14,4 +14,5 @@ then
 else
 
         echo "False";
+
 fi
